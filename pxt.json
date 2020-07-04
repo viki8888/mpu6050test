@@ -1,0 +1,22 @@
+{
+    "name": "MPU6050Test",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.3.6",
+        "mpu6050": "github:whuyangyuan/pxt-mpu6050#f4651906ec11a9d6c4f93fd1d4249790b3408bad"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}

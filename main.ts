@@ -1,0 +1,12 @@
+MPU6050.initMPU6050(MPU6050.MPU6050_I2C_ADDRESS.ADDR_0x68)
+serial.setBaudRate(BaudRate.BaudRate9600)
+basic.forever(function () {
+    basic.showNumber(MPU6050.readTempature(MPU6050.MPU6050_I2C_ADDRESS.ADDR_0x68))
+    basic.pause(2000)
+    serial.writeString("X方向倾角：")
+    serial.writeNumber(MPU6050.getAngle(MPU6050.MPU6050_I2C_ADDRESS.ADDR_0x68, MPU6050.AXIS.X))
+    serial.writeString("Y方向倾角：")
+    serial.writeNumber(MPU6050.getAngle(MPU6050.MPU6050_I2C_ADDRESS.ADDR_0x68, MPU6050.AXIS.Y))
+    serial.writeString("Z方向倾角：")
+    serial.writeNumber(MPU6050.getAngle(MPU6050.MPU6050_I2C_ADDRESS.ADDR_0x68, MPU6050.AXIS.Z))
+})
